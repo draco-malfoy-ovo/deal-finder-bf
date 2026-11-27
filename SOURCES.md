@@ -7,6 +7,11 @@ comparable price printed on the same store page. Sale windows are the
 stores' published Black Friday windows: Best Buy Nov 19–28, Walmart Nov
 23–29, Target Nov 22–29 (all 2026).
 
+The hand-in program (main.ts) preflights every listed deal before writing
+its output: product, store, sale price, usual price, store link and source
+must all be present, and the screenshots and app/ files must sit inside the
+competition's caps, or the run exits nonzero and hands nothing in.
+
 ## Listed deals
 
 1. **Hisense 98" QD5 Hi-QLED 4K Fire TV (98QD5SF) — Best Buy $799.99, comp. value $2,499.99.**
