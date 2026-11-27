@@ -1,0 +1,204 @@
+/* TrueTag Deal Finder — one stylesheet, system fonts, no external assets. */
+
+:root {
+  --paper: #faf5ec;
+  --card: #ffffff;
+  --ink: #1d1710;
+  --muted: #6f6353;
+  --line: #e4d9c6;
+  --red: #c1271b;
+  --red-dark: #8f1a10;
+  --green: #177245;
+  --green-bg: #e2f2e6;
+  --amber: #9a6206;
+  --amber-bg: #fbeecd;
+  --rose: #9f1239;
+  --rose-bg: #fbe7ee;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.45;
+}
+
+.masthead {
+  background: var(--ink);
+  color: #fdf9f1;
+  padding: 28px 20px 22px;
+}
+.brand {
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffb03a;
+  font-size: 15px;
+}
+.brand span { color: #fdf9f1; font-weight: 600; }
+.masthead h1 {
+  margin: 8px 0 6px;
+  font-size: clamp(26px, 5vw, 40px);
+  line-height: 1.12;
+}
+.standfirst { margin: 0; max-width: 62ch; color: #e9e0cf; font-size: 16px; }
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 18px;
+  max-width: 980px;
+}
+.kpi {
+  background: #2a2118;
+  border: 1px solid #453723;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+.kpi b { display: block; font-size: 24px; color: #ffb03a; }
+.kpi span { font-size: 12.5px; color: #cfc3ab; }
+
+.controls {
+  padding: 16px 20px 4px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.search-box { display: block; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; }
+.search-box input {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px 14px;
+  font-size: 17px;
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--ink);
+}
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 10px; }
+.chip {
+  border: 1.5px solid var(--ink);
+  background: var(--card);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.chip.on { background: var(--red); border-color: var(--red-dark); color: #fff; }
+.selects { display: flex; flex-wrap: wrap; gap: 14px; }
+.selects label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+.selects select {
+  display: block;
+  margin-top: 5px;
+  padding: 9px 10px;
+  font-size: 15.5px;
+  border: 1.5px solid var(--ink);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--ink);
+}
+.legend { font-size: 13.5px; color: var(--muted); margin: 14px 0 4px; }
+.count { font-weight: 700; margin: 6px 0 0; }
+
+.verdict {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.v-verified { background: var(--green-bg); color: var(--green); }
+.v-conditions { background: var(--amber-bg); color: var(--amber); }
+.v-marketing { background: var(--rose-bg); color: var(--rose); }
+
+main { max-width: 1180px; margin: 0 auto; padding: 10px 20px 8px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-top: 6px solid var(--green);
+  border-radius: 12px;
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.card.v-conditions { border-top-color: #d99a16; }
+.card.v-marketing { border-top-color: var(--rose); }
+.card-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.cat { font-size: 12.5px; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
+.card h3 { margin: 0; font-size: 19px; line-height: 1.25; }
+.blurb { margin: 0; color: var(--muted); font-size: 14.5px; }
+.price-row { display: flex; align-items: baseline; gap: 10px; margin-top: 2px; }
+.price { font-size: 32px; font-weight: 800; color: var(--red-dark); }
+.usual { font-size: 17px; color: var(--muted); text-decoration: line-through; }
+.off { background: var(--red); color: #fff; font-weight: 800; font-size: 14px; padding: 3px 8px; border-radius: 6px; }
+.save { margin: 0; font-weight: 700; font-size: 14.5px; }
+.score-row { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--muted); }
+.score-bar { flex: 1; height: 8px; background: #efe6d4; border-radius: 99px; overflow: hidden; }
+.score-fill { display: block; height: 100%; background: var(--green); }
+.card.v-conditions .score-fill { background: #d99a16; }
+.card.v-marketing .score-fill { background: var(--rose); }
+.score-num { font-weight: 800; color: var(--ink); font-size: 14px; }
+.note { margin: 0; font-size: 14px; background: var(--paper); border-radius: 8px; padding: 9px 11px; }
+.also-row { margin: 0; font-size: 13.5px; color: var(--muted); }
+.also + .also { margin-left: 10px; }
+.checked { margin: 0; font-size: 12.5px; color: var(--muted); }
+.go {
+  margin-top: auto;
+  display: block;
+  text-align: center;
+  background: var(--ink);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 11px 12px;
+  border-radius: 9px;
+  font-size: 15.5px;
+}
+.go:hover { background: var(--red-dark); }
+.empty { font-size: 16px; background: var(--card); border: 1.5px dashed var(--line); border-radius: 12px; padding: 18px; }
+
+.panel {
+  max-width: 1180px;
+  margin: 14px auto;
+  padding: 18px 22px;
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  width: calc(100% - 40px);
+}
+.panel h2 { margin: 0 0 8px; font-size: 21px; }
+.panel p, .panel li { font-size: 15px; }
+.panel ul { margin: 6px 0; padding-left: 20px; }
+.panel li { margin: 7px 0; }
+
+footer {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 8px 20px 30px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  .kpis { grid-template-columns: repeat(2, 1fr); }
+  .grid { grid-template-columns: 1fr; }
+  .price { font-size: 28px; }
+  .masthead { padding: 22px 16px 18px; }
+  .controls, main { padding-left: 14px; padding-right: 14px; }
+  .panel { width: calc(100% - 28px); }
+}

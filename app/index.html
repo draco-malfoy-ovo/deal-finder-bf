@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrueTag — Black Friday Deal Finder</title>
+<meta name="description" content="A hand-checked Black Friday deal finder: real prices read at Best Buy, Walmart and Target on Fri Nov 27, 2026, each with an honest verdict on whether it is really a deal.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="masthead">
+  <p class="brand">TrueTag <span>Deal Finder</span></p>
+  <h1>Black Friday deals, checked by hand.</h1>
+  <p class="standfirst">Every price on this board was read at the store on <b>Friday, November 27, 2026</b> — the product, the sale price, the usual price and the catch, if there is one. If a headline discount did not survive checking, the card says so.</p>
+  <div class="kpis">
+    <div class="kpi"><b>12</b><span>deals checked &amp; listed</span></div>
+    <div class="kpi"><b>3</b><span>stores: Best Buy · Walmart · Target</span></div>
+    <div class="kpi"><b>$1,700</b><span>biggest single saving (98&quot; TV)</span></div>
+    <div class="kpi"><b>$4,182</b><span>total savings across the board</span></div>
+  </div>
+</header>
+
+<section class="controls" aria-label="Search and filters">
+  <label class="search-box">
+    <span>Search</span>
+    <input id="search" type="search" placeholder="Try “beats”, “OLED”, “vacuum”…" autocomplete="off">
+  </label>
+  <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+  <div class="selects">
+    <label>Store
+      <select id="storeSel"></select>
+    </label>
+    <label>Discount
+      <select id="discSel">
+        <option value="0">Any discount</option>
+        <option value="40">40% off or more</option>
+        <option value="50">50% off or more</option>
+        <option value="60">60% off or more</option>
+      </select>
+    </label>
+    <label>Sort by
+      <select id="sortSel">
+        <option value="score">Deal score</option>
+        <option value="discount">Biggest % off</option>
+        <option value="savings">Biggest $ saving</option>
+        <option value="priceLow">Price: low to high</option>
+        <option value="priceHigh">Price: high to low</option>
+      </select>
+    </label>
+  </div>
+  <p class="legend">
+    <span class="verdict v-verified">Verified low</span> the price is a genuine low for the item ·
+    <span class="verdict v-conditions">Real, with a catch</span> a real saving with a condition on the card ·
+    <span class="verdict v-marketing">Mostly marketing</span> the headline does not survive scrutiny
+  </p>
+  <p id="count" class="count"></p>
+</section>
+
+<main>
+  <div id="grid" class="grid"></div>
+  <p id="empty" class="empty" hidden>No checked deal matches that combination. Loosen a filter — every deal on the board is real, so an empty board would be a bug, not a bargain.</p>
+</main>
+
+<section class="panel">
+  <h2>Checked, and left out</h2>
+  <p>A deal finder earns trust by what it refuses to list. These were checked on Nov 27, 2026 and deliberately kept off the board:</p>
+  <ul>
+    <li><b>Ninja Kitchen System with BlendSense (TB401), “28% off” at $179.95.</b> Its Amazon price history (pricehistory.app) shows the same $179.95 on October 4 and November 10, and $146.99 earlier still. A routine sale price wearing a Black Friday badge.</li>
+    <li><b>Kindle Paperwhite (2024), “35% off” at $129.99.</b> The $199.99 “list price” is the new 2026 model’s price; Amazon raised this model’s own list from $159.99 in August (Fortune, reported by TechTimes and MacObserver). The real saving against what this Kindle actually cost is about $30, not $70.</li>
+    <li><b>Amazon’s own-device percentages generally.</b> Tom’s Guide notes Amazon raised list prices on some Echo, Fire TV and Kindle devices earlier in 2026, so discounts on those are measured against higher starting prices than shoppers saw last year.</li>
+  </ul>
+</section>
+
+<section class="panel">
+  <h2>How the checking works</h2>
+  <ul>
+    <li><b>Read at the store.</b> Each price was read on the store’s own product page, or in a deals source that names the store, on Fri Nov 27, 2026. The card names its source and the store link opens the product.</li>
+    <li><b>The usual price is the store’s own.</b> It is the regular or comparable price printed on the same page — never a price invented for effect. Where the “was” price varies (by color, for instance), the card says so.</li>
+    <li><b>Verdicts are evidence-based.</b> “Verified low” needs a second source or a price-history check behind it. Conditions — a color-only price, a sale that only undoes a price rise — are printed on the card, not hidden.</li>
+    <li><b>Deal score, in the open.</b> Score = discount % + savings bonus (1 point per $50 saved, up to 30) + verdict bonus (Verified low +20, Real with a catch +10, Mostly marketing +0), capped at 99. Best deals sit at the top by default; you can re-sort by discount, dollars saved or price.</li>
+    <li><b>Prices move.</b> Black Friday prices change and stock runs out. Each card says when its price was checked and when the sale ends; the store page is the final word.</li>
+  </ul>
+</section>
+
+<footer>
+  <p>TrueTag Deal Finder — built for Black Friday weekend 2026. Prices checked Fri Nov 27, 2026 (afternoon, CST) at Best Buy, Walmart and Target. Not affiliated with any store; store links open the product pages the prices were read from.</p>
+</footer>
+
+<script src="deals-data.js"></script>
+<script src="finder.js"></script>
+</body>
+</html>
