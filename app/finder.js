@@ -139,7 +139,8 @@
       '<span class="score-num">' + dealScore(deal) + '</span></div>' +
       '<p class="note">' + esc(deal.note) + '</p>' +
       (also ? '<p class="also-row">' + also + '</p>' : '') +
-      '<p class="checked">Price checked ' + esc(window.DEAL_CHECKED_LABEL) + ' · Source: ' + esc(deal.source) + '</p>' +
+      '<p class="checked">Price checked ' + esc(window.DEAL_CHECKED_LABEL) + ' · rechecked ' + esc(window.DEAL_RECHECKED_LABEL) + ' · Source: ' + esc(deal.source) + '</p>' +
+      '<p class="evidence">Evidence: <a href="' + esc(deal.evidence.url) + '" target="_blank" rel="noopener">' + esc(deal.evidence.label) + '</a></p>' +
       '<a class="go" href="' + esc(deal.url) + '" target="_blank" rel="noopener">View deal at ' + esc(deal.store) + ' →</a>' +
       '</article>'
     );

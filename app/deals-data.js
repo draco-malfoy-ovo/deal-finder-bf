@@ -6,6 +6,13 @@
 // showed at check time. Full per-deal source notes live in SOURCES.md in
 // the repository root.
 //
+// Rechecked Saturday, November 28, 2026 (morning, CST): every price below
+// was read again at the store or in dated deals coverage. All twelve were
+// unchanged and still inside their sale windows, so no price was edited,
+// nothing was repriced and nothing was marked ended. Each deal now also
+// carries an "evidence" link — dated, independent coverage of the same
+// price — next to its store link.
+//
 // verdict: "verified"   = price checks out as a genuine low for this item
 //          "conditions" = real saving, but with a catch printed on the card
 //          "marketing"  = headline discount that does not survive scrutiny
@@ -14,6 +21,7 @@
 //         capped at 99. The formula is printed on the site itself.
 
 window.DEAL_CHECKED_LABEL = 'Fri Nov 27, 2026';
+window.DEAL_RECHECKED_LABEL = 'Sat Nov 28, 2026';
 
 window.DEALS = [
   {
@@ -26,6 +34,7 @@ window.DEALS = [
     verdict: 'verified',
     ends: 'Ends Sat Nov 28',
     source: 'Best Buy product page',
+    evidence: { label: 'Slickdeals frontpage thread ($800 / $2,500)', url: 'https://slickdeals.net/sh/thread-20338530/e/3/c/deal-details/au/93975838e81311f1a34eae5f1dc1cb90/' },
     url: 'https://www.bestbuy.com/product/hisense-98-class-qd5-hi-qled-series-4k-uhd-smart-fire-tv-2026/J3Z9Z42FS4/sku/6685580?ref=388&loc=Podunky+LLC',
     note: 'Best Buy doorbuster, sold only at Best Buy. The $1,700 gap to the comparable value is the store\'s own figure, and Slickdeals ran it on the frontpage at the same price.',
     blurb: 'A 98-inch QLED with Dolby Vision and Fire TV built in — the most screen per dollar on this board.',
@@ -41,6 +50,7 @@ window.DEALS = [
     verdict: 'verified',
     ends: 'Ends Sat Nov 28',
     source: 'Best Buy product page and Best Buy\'s Black Friday press release',
+    evidence: { label: 'Best Buy\'s Black Friday press release ("Save $300… Sale price: $199.99")', url: 'https://corporate.bestbuy.com/2026/black-friday-sale-deals' },
     url: 'https://www.bestbuy.com/product/shark-powerdetect-speed-cordless-stick-vacuum-cleaner-hepa-filtration-60-min-runtime-ia1121-ivory/JXJVXL847Y/sku/6689453',
     note: 'Named in Best Buy\'s own Black Friday press release at $300 off, and the product page agrees. Fine print: the 60-minute runtime is ECO mode with a non-motorized tool.',
     blurb: 'HEPA stick vacuum that boosts power on dirt and folds flat for storage.',
@@ -56,6 +66,7 @@ window.DEALS = [
     verdict: 'verified',
     ends: 'Ends Sat Nov 28',
     source: 'Best Buy product page',
+    evidence: { label: 'AppleInsider, "Black Friday OLED TV deals start at $699"', url: 'https://appleinsider.com/articles/26/11/21/black-friday-oled-tv-deals-start-at-699-with-up-to-1400-off-lg-sony-samsung' },
     url: 'https://www.bestbuy.com/product/lg-55-class-b6e-series-oled-ai-4k-smart-webos-tv-2026/JJ8VPZZ7PZ',
     note: 'The cheapest way into a current-year OLED: AppleInsider and The Gadgeteer both note it undercuts every rival 55-inch OLED by $300 or more this week.',
     blurb: 'Perfect-black OLED panel, webOS, and the lowest entry price OLED has had all year.',
@@ -71,6 +82,7 @@ window.DEALS = [
     verdict: 'verified',
     ends: 'Ends Sat Nov 28',
     source: 'Best Buy product page',
+    evidence: { label: 'HotHardware, "WH-1000XM5 all-time low"', url: 'https://hothardware.com/news/best-buy-doorbuster-deals-slash-sony-wh-1000xm5-all-time-low' },
     url: 'https://www.bestbuy.com/product/sony-wh-1000xm5-wireless-noise-canceling-over-the-ear-headphones-blue/6538379',
     note: 'Called an all-time low by HotHardware, How-To Geek and Digital Trends. All four colors are $169.99; the link opens the blue one.',
     blurb: 'The noise-cancelling benchmark, at less than half its usual price.',
@@ -86,6 +98,7 @@ window.DEALS = [
     verdict: 'conditions',
     ends: 'Ends Sun Nov 29',
     source: 'Walmart product page',
+    evidence: { label: 'DealNews product page ("$99… best price we\'ve seen")', url: 'https://www.dealnews.com/products/Beats/Beats-Studio-Pro-Wireless-Noise-Cancelling-Over-Ear-Headphones/562849.html' },
     url: 'https://www.walmart.com/ip/Beats-Studio-Pro-Wireless-Headphones-White-Black/14280620660',
     note: 'The catch is color: only Matte White and White & Black are $99. Other colors on the same page run $149.95 to $199.95. DealNews notes $99 is $40 under Best Buy and Target.',
     blurb: 'Full noise cancelling and 40-hour battery, under a hundred dollars in two colors.',
@@ -101,6 +114,7 @@ window.DEALS = [
     verdict: 'verified',
     ends: 'Ends Sat Nov 28',
     source: 'Best Buy product page',
+    evidence: { label: 'DealNews, Best Buy Black Friday TV roundup', url: 'https://www.dealnews.com/Best-Buy-Black-Friday-TV-Deals-Up-to-68-off-free-shipping/22415314.html' },
     url: 'https://www.bestbuy.com/product/tcl-65-s4cf-series-4k-uhd-hdr-smart-tv-with-fire-tv-2026/J36QYTHZVP/sku/6687112?ref=166_625&loc=SOC_1692337_36902866_459577630',
     note: 'A Black Friday doorbuster in Best Buy\'s own sale, which ends Nov 28. The $469.99 figure is the comparable value printed on the same page.',
     blurb: 'A 65-inch 4K set with Fire TV built in for the price of a 43-inch set last year.',
@@ -116,6 +130,7 @@ window.DEALS = [
     verdict: 'conditions',
     ends: 'Ends Sun Nov 29',
     source: 'Target\'s Black Friday Beats page',
+    evidence: { label: 'Clark Deals, Target Black Friday roundup ("Bright Pink for $79.99")', url: 'https://clarkdeals.com/black-friday/target-black-friday-ad/' },
     url: 'https://www.target.com/s/black+friday+beats+solo+4+black+headphones',
     note: '$79.99 is a new low, but only in Bright Pink and Warm White; the other colors are $99.99 at Target. Target\'s Black Friday page lists both prices.',
     blurb: '50-hour battery and spatial audio in an on-ear frame, at 60% off in two colors.',
@@ -131,6 +146,7 @@ window.DEALS = [
     verdict: 'verified',
     ends: 'Ends Sat Nov 28',
     source: 'Best Buy product page and Best Buy\'s Black Friday release',
+    evidence: { label: 'DealNews product page ("$50 less than HP direct")', url: 'https://www.dealnews.com/products/HP/HP-Omni-Book-5-Core-5-14-OLED-Laptop/563316.html' },
     url: 'https://www.bestbuy.com/product/hp-omnibook-5-14-2k-oled-touchscreen-laptop-intel-core-5-series-3-2026-8gb-memory-256gb-ssd-starlit-blue/J3KSW748W6',
     note: 'Best Buy\'s release price is $350 off, and DealNews points out it is $50 less than buying the same machine from HP direct.',
     blurb: 'Intel Core 5 Series 3, 8GB memory, 256GB SSD and a 2K OLED touchscreen at a Chromebook-plus price.',
@@ -146,6 +162,7 @@ window.DEALS = [
     verdict: 'verified',
     ends: 'Ends Sun Nov 29',
     source: 'Walmart product page',
+    evidence: { label: 'DealNews product page ("$228, verified")', url: 'https://www.dealnews.com/products/Hisense/Hisense-H5-R1-Series-65-H5-R1-65-4-K-UHD-Smart-Roku-TV/564392.html' },
     url: 'https://www.walmart.com/ip/20206324665',
     note: 'Walmart\'s Black Friday event price with free shipping; DealNews verified the same $228 the morning it was checked here.',
     blurb: 'A 65-inch 4K Roku set that undercuts the Best Buy doorbuster above by two dollars.',
@@ -161,6 +178,7 @@ window.DEALS = [
     verdict: 'verified',
     ends: 'Ends Sun Nov 29',
     source: 'Target product page',
+    evidence: { label: 'Slickdeals thread (Target, $149.99)', url: 'https://slickdeals.net/sh/thread-20377815/e/3/c/deal-details/au/af651be4e77e11f1a6a09668644b317b/' },
     url: 'https://www.target.com/p/ap2022-true-wireless-bluetooth-headphones/-/A-85978609?TCID=OGS&AFID=google&CPNG=Electronics&adgroup=57-10&srsltid=AYCX9vIme_ghC480tywTrIjanimLnzm2ZCS3yQ488_sJOkGzsPUYoai5FfU',
     note: 'Target\'s page price, and Slickdeals\' frontpage agrees. Amazon stepped down to the same $149 on Nov 23 (reported by 9to5Mac), so no store beats it — pick by convenience.',
     blurb: 'Apple\'s flagship buds with heart-rate sensing, $100 off everywhere that matters.',
@@ -176,6 +194,7 @@ window.DEALS = [
     verdict: 'verified',
     ends: 'Ends Sun Nov 29, while supplies last',
     source: 'Walmart product page',
+    evidence: { label: 'Slickdeals thread ("$35 / $59 at Walmart")', url: 'https://slickdeals.net/sh/thread-20373591/e/3/c/deal-details/au/933a6df6ea3611f1919eae6129e59410/' },
     url: 'https://www.walmart.com/ip/Keurig-K-Express-Essentials-Bluebell-Single-Serve-K-Cup-Pod-Coffee-Maker/13883356007',
     note: 'A Walmart-exclusive model. The "was" price depends on color ($54.97 to $76.80); Bluebell\'s is $59.00, and $35 is the Black Friday price in every color.',
     blurb: 'Single-serve K-Cup brewer in a countertop-friendly footprint, at its Black Friday price.',
@@ -191,6 +210,7 @@ window.DEALS = [
     verdict: 'marketing',
     ends: 'Runs to Fri Dec 5',
     source: 'Best Buy product page',
+    evidence: { label: 'The Shortcut, "Switch 2 Black Friday" (bundle $499, console alone $499.99)', url: 'https://www.theshortcut.com/p/switch-2-restock-black-friday-2026' },
     url: 'https://www.bestbuy.com/product/switch-2-mario-kart-world-bundle/6689812',
     note: 'Read the fine print: the $50 "saving" only undoes Nintendo\'s September 2026 price rise, and the console alone costs the same $499.99. The honest value is that the game comes free versus buying the two separately today. Same price at Walmart and Target (The Verge).',
     blurb: 'The bundle every store is advertising — listed here with its real story, not the headline.',
