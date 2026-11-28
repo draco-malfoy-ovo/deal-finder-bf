@@ -115,6 +115,8 @@
   function cardHtml(deal) {
     var pct = discountPct(deal);
     var v = VERDICTS[deal.verdict];
+    var checkedLabel = deal.checkedLabel || window.DEAL_CHECKED_LABEL;
+    var recheckedLabel = deal.recheckedLabel !== undefined ? deal.recheckedLabel : window.DEAL_RECHECKED_LABEL;
     var also = deal.alsoAt
       .map(function (a) {
         return '<span class="also">Also at ' + esc(a.store) + ': <b>' + money(a.price) + '</b></span>';
@@ -139,7 +141,7 @@
       '<span class="score-num">' + dealScore(deal) + '</span></div>' +
       '<p class="note">' + esc(deal.note) + '</p>' +
       (also ? '<p class="also-row">' + also + '</p>' : '') +
-      '<p class="checked">Price checked ' + esc(window.DEAL_CHECKED_LABEL) + ' · rechecked ' + esc(window.DEAL_RECHECKED_LABEL) + ' · Source: ' + esc(deal.source) + '</p>' +
+      '<p class="checked">Price checked ' + esc(checkedLabel) + (recheckedLabel ? ' · rechecked ' + esc(recheckedLabel) : '') + ' · Source: ' + esc(deal.source) + '</p>' +
       '<p class="evidence">Evidence: <a href="' + esc(deal.evidence.url) + '" target="_blank" rel="noopener">' + esc(deal.evidence.label) + '</a></p>' +
       '<a class="go" href="' + esc(deal.url) + '" target="_blank" rel="noopener">View deal at ' + esc(deal.store) + ' →</a>' +
       '</article>'

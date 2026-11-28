@@ -13,6 +13,14 @@
 // carries an "evidence" link — dated, independent coverage of the same
 // price — next to its store link.
 //
+// Added Saturday, November 28, 2026 (afternoon, CST): two further deals,
+// checked that day and appended at the end of the list — the board's first
+// Amazon card (the direct product link search had not returned on Nov 27
+// was obtained) and a second Kitchen card. The original twelve above were
+// not edited. The two new cards carry their own "checkedLabel" and a null
+// "recheckedLabel": they were checked once, on Nov 28, and the card says
+// exactly that.
+//
 // verdict: "verified"   = price checks out as a genuine low for this item
 //          "conditions" = real saving, but with a catch printed on the card
 //          "marketing"  = headline discount that does not survive scrutiny
@@ -218,5 +226,41 @@ window.DEALS = [
       { store: 'Walmart', price: 499.99 },
       { store: 'Target', price: 499.99 },
     ],
+  },
+  {
+    id: 'airpods-pro-3-amazon',
+    product: 'Apple AirPods Pro 3 Wireless Earbuds',
+    category: 'Audio',
+    store: 'Amazon',
+    price: 149.00,
+    usual: 249.00,
+    verdict: 'verified',
+    ends: 'Live Sat Nov 28 — Amazon Black Friday event',
+    source: 'Amazon product page',
+    evidence: { label: 'MacRumors, "The AirPods Pro 3 are available for $149.00, down from $249.00"', url: 'https://www.macrumors.com/2026/11/27/best-black-friday-airpods-deals-2026/' },
+    url: 'https://www.amazon.com/dp/B0FQFB8FMG',
+    note: 'The same earbuds as the Target card on this board, 99 cents cheaper at Amazon — and an all-time low: MacRumors records the previous tracked low at $169, beaten by $20 when Amazon stepped down to $149. CNN Underscored and 9to5Mac show the same $149 today.',
+    blurb: 'Apple\'s flagship noise-cancelling earbuds at the lowest price ever tracked for them.',
+    alsoAt: [{ store: 'Target', price: 149.99 }],
+    checkedLabel: 'Sat Nov 28, 2026',
+    recheckedLabel: null,
+  },
+  {
+    id: 'instant-pot-vortex-walmart',
+    product: 'Instant Pot 5.7Qt VORTEX 4-in-1 Air Fryer (Black)',
+    category: 'Kitchen',
+    store: 'Walmart',
+    price: 54.99,
+    usual: 84.99,
+    verdict: 'verified',
+    ends: 'Live Sat Nov 28 — Walmart Black Friday deal',
+    source: 'Walmart product page',
+    evidence: { label: 'FashLyst price overview, "Walmart listed this item at $54.99 as of November 28, 2026"', url: 'https://www.fashlyst.com/shop/instant-pot-5-7qt-vortex-4-in-1-air-fryer-crisps-roasts-reheats-bakes-wi-2dei5d' },
+    url: 'https://www.walmart.com/ip/Instant-Pot-5-7Qt-VORTEX-4-in-1-Air-Fryer-Crisps-Roasts-Reheats-Bakes-with-EvenCrisp-Technology-Black/481088660',
+    note: 'Walmart\'s own page reads "Now $54.99, You save $30.00, was $84.99" — and the price has already stepped down once inside this same sale, from $59.99 earlier in the event. An independent price overview dated today (Nov 28) lists the same $54.99 at Walmart.',
+    blurb: 'The 5.7-quart EvenCrisp air fryer — crisps, roasts, reheats and bakes — at Walmart\'s Black Friday price.',
+    alsoAt: [],
+    checkedLabel: 'Sat Nov 28, 2026',
+    recheckedLabel: null,
   },
 ];
