@@ -53,17 +53,20 @@ async function shot(name, width, height, prepare) {
   await page.close();
 }
 
-await shot('1-board.jpg', 1280, 800, null);
+await shot('1-cover.jpg', 1280, 800, null);
 
-await shot('2-filter-tvs.jpg', 1280, 800, async (page) => {
+await shot('2-left-out.jpg', 1280, 800, async (page) => {
+  await page.evaluate(() => {
+    const panel = document.querySelector('.panel');
+    window.scrollTo(0, panel.offsetTop - 430);
+  });
+  await wait(200);
+});
+
+await shot('3-filter-tvs.jpg', 1280, 800, async (page) => {
   await page.click('.chip[data-cat="TVs"]');
   await page.select('#discSel', '50');
   await page.waitForFunction('document.querySelectorAll("#grid .card").length === 3', { timeout: 10000 });
-});
-
-await shot('3-search-beats.jpg', 1280, 800, async (page) => {
-  await page.type('#search', 'beats');
-  await page.waitForFunction('document.querySelectorAll("#grid .card").length === 2', { timeout: 10000 });
 });
 
 await shot('4-phone.jpg', 390, 844, null);
