@@ -109,6 +109,33 @@ price, and the board does not pad.
     Nintendo, and explains the context printed on the card: the cut only returns the bundle
     to its pre-September-2026-rise price, and the console alone costs the same $499.99.
 
+## Added Sat Nov 28, 2026 (round 2)
+
+The twelve deals above were not edited in this round: their prices, store
+links and evidence stand exactly as rechecked on the morning of Nov 28. Two
+deals checked that afternoon were added; their cards carry a single
+"checked Sat Nov 28, 2026" line and no recheck line.
+
+13. **Apple AirPods Pro 3 — Amazon $149.00, reg. $249.99.**
+    Amazon product page: https://www.amazon.com/dp/B0FQFB8FMG — the direct
+    product link that search had not returned on Nov 27 (see deal 10) was
+    obtained on Nov 28. MacRumors' Black Friday AirPods roundup (updated
+    Nov 27, read Nov 28): "The AirPods Pro 3 are available for $149.00,
+    down from $249.00"; CNN Underscored's Nov 28 roundup and 9to5Mac show
+    the same $149 at Amazon. MacRumors (Nov 23) records the previous
+    tracked low as $169, so $149 is an all-time low, $20 under it. The
+    Target card (deal 10) is unchanged; the Amazon card cross-references
+    its $149.99 and is cross-referenced back only here, not on that card.
+14. **Instant Pot 5.7Qt VORTEX 4-in-1 Air Fryer — Walmart $54.99, was $84.99.**
+    Walmart's product page reads "Now $54.99, You save $30.00, was $84.99";
+    the same page showed $59.99 earlier in the sale, so the price stepped
+    down inside the event. An independent price overview (FashLyst, dated
+    Nov 28, 2026) lists the item at $54.99 at Walmart the same day.
+
+Board totals after this round: 14 deals, 4 stores, total savings
+$4,182.01 + $100.00 + $30.00 = $4,312.01 (the site prints $4,312);
+verdicts 11 Verified low / 2 Real, with a catch / 1 Mostly marketing.
+
 ## Checked and left out (also on the site)
 
 - **Ninja Kitchen System with BlendSense (TB401), Amazon $179.95 "28% off $249.99".**
