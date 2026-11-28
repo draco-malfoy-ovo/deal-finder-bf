@@ -81,7 +81,9 @@ function preflight() {
   // The board's data file is a browser script that fills window.DEALS;
   // run it against an empty window and check every deal carries the fields
   // a shopper (and the finalist review) needs: product, store, sale price,
-  // usual price, store link and source.
+  // usual price, store link and source. Since the Nov 28 recheck, every
+  // deal must also carry an evidence link — dated, independent coverage of
+  // the same price — so a card can never ship with an unsupported price.
   const windowShim = {};
   runInNewContext(readFileSync(join(here, 'app', 'deals-data.js'), 'utf8'), { window: windowShim });
   const deals = windowShim.DEALS;
@@ -101,6 +103,12 @@ function preflight() {
       }
       if (typeof deal.url !== 'string' || !deal.url.startsWith('https://')) {
         problems.push(`deal ${label}: url is missing or not an https link`);
+      }
+      const evidence = deal.evidence;
+      if (!evidence || typeof evidence !== 'object' || typeof evidence.label !== 'string' || evidence.label.trim() === '') {
+        problems.push(`deal ${label}: evidence label is missing or empty`);
+      } else if (typeof evidence.url !== 'string' || !evidence.url.startsWith('https://')) {
+        problems.push(`deal ${label}: evidence url is missing or not an https link`);
       }
       for (const field of ['price', 'usual']) {
         if (typeof deal[field] !== 'number' || !Number.isFinite(deal[field]) || deal[field] <= 0) {

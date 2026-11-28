@@ -8,9 +8,51 @@ stores' published Black Friday windows: Best Buy Nov 19–28, Walmart Nov
 23–29, Target Nov 22–29 (all 2026).
 
 The hand-in program (main.ts) preflights every listed deal before writing
-its output: product, store, sale price, usual price, store link and source
-must all be present, and the screenshots and app/ files must sit inside the
+its output: product, store, sale price, usual price, store link, source and
+— since the November 28 recheck below — an evidence link must all be
+present, and the screenshots and app/ files must sit inside the
 competition's caps, or the run exits nonzero and hands nothing in.
+
+## Recheck — Saturday, November 28, 2026
+
+On the morning of Saturday, November 28, 2026 (CST), every listed price was
+read again — the store's own page as search reproduces it, cross-checked
+against dated deals coverage. Result: **12 checked, 12 unchanged, 0
+repriced, 0 ended.** Every deal was still inside its published sale window
+(Best Buy's ends today, Nov 28; Walmart's and Target's run to Nov 29; the
+Switch 2 bundle runs to Dec 5), so no card was edited, repriced or marked
+ended, and the check label on every card now shows both dates.
+
+Each card also gained an evidence link — dated, independent coverage of the
+same price, so a reviewer can see the price as it stood at check time:
+
+1. Hisense 98" QD5 — Slickdeals frontpage thread, $800 / $2,500: https://slickdeals.net/sh/thread-20338530/e/3/c/deal-details/au/93975838e81311f1a34eae5f1dc1cb90/
+2. Shark PowerDetect Speed — Best Buy's own Black Friday press release, "Save $300 on Shark PowerDetect Speed… (Sale price: $199.99)": https://corporate.bestbuy.com/2026/black-friday-sale-deals
+3. LG 55" B6E OLED — AppleInsider, "Black Friday OLED TV deals start at $699": https://appleinsider.com/articles/26/11/21/black-friday-oled-tv-deals-start-at-699-with-up-to-1400-off-lg-sony-samsung
+4. Sony WH-1000XM5 — HotHardware, "WH-1000XM5 all-time low" ($169.99, save $228.01): https://hothardware.com/news/best-buy-doorbuster-deals-slash-sony-wh-1000xm5-all-time-low
+5. Beats Studio Pro — DealNews product page, "$99… $40 less than Best Buy or Target, best price we've seen": https://www.dealnews.com/products/Beats/Beats-Studio-Pro-Wireless-Noise-Cancelling-Over-Ear-Headphones/562849.html
+6. TCL 65" S4CF — DealNews' Best Buy Black Friday TV roundup ("$240 off at $229.99… deals end November 28"): https://www.dealnews.com/Best-Buy-Black-Friday-TV-Deals-Up-to-68-off-free-shipping/22415314.html
+7. Beats Solo 4 — Clark Deals' Target Black Friday roundup ("Bright Pink for $79.99 — Save $120 on this color exclusive to Target"): https://clarkdeals.com/black-friday/target-black-friday-ad/
+8. HP OmniBook 5 14" — DealNews product page ("drops to $449.99… $50 less than you'd pay direct from HP"): https://www.dealnews.com/products/HP/HP-Omni-Book-5-Core-5-14-OLED-Laptop/563316.html
+9. Hisense 65" H5R1 — DealNews product page ($228, verified): https://www.dealnews.com/products/Hisense/Hisense-H5-R1-Series-65-H5-R1-65-4-K-UHD-Smart-Roku-TV/564392.html
+10. AirPods Pro 3 — Slickdeals thread for the Target offer ($149.99, reg. $249.99), and Target's own search page still showed $149.99 on the morning of the recheck: https://slickdeals.net/sh/thread-20377815/e/3/c/deal-details/au/af651be4e77e11f1a6a09668644b317b/
+11. Keurig K-Express Essentials — Slickdeals thread ("$35 / $59 at Walmart", Bluebell among the colors): https://slickdeals.net/sh/thread-20373591/e/3/c/deal-details/au/933a6df6ea3611f1919eae6129e59410/
+12. Switch 2 bundle — The Shortcut's Black Friday check (Nov 27, 6:50pm ET): bundle $499, "the same as the console alone ($499.99)": https://www.theshortcut.com/p/switch-2-restock-black-friday-2026
+
+All discounts and scores were recomputed with the site's single formula —
+discount % = round((1 − price ÷ usual) × 100); savings bonus = min(30,
+round(savings ÷ 50)); verdict bonus 20 / 10 / 0; total capped at 99 — and
+the board's totals re-added: the twelve cards' savings sum to $4,182.01,
+matching the $4,182 headline figure on the site.
+
+One gap was rechecked and deliberately left as it was: AirPods Pro 3 at
+Amazon. CNN Underscored and DealNews both confirm Amazon's $149 (an
+all-time low, down from $249), but no amazon.com product URL could be
+obtained, so under this board's own rule no Amazon card was added; the
+Target card's linkless "also at Amazon $149.00" note stands, now
+re-verified. No new deals were added in this pass — nothing else was
+listed without a store product link that opens the product at the printed
+price, and the board does not pad.
 
 ## Listed deals
 
